@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  box-sizing: border-box; }
+
+body {
+  border: 10px solid #cbc6b9;
+  background-color: #edece4;
+  font-family: "PT Mono", monospace;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #2a2426; }
+
+.container {
+  width: 1200px;
+  margin: 60px auto; }
+  @media only screen and (min-width: 768px) and (max-width: 1300px) {
+    .container {
+      width: 1000px; } }
+  @media only screen and (max-width: 1100px) {
+    .container {
+      width: 760px; } }
+  @media only screen and (max-width: 1100px) {
+    .container {
+      width: 400px; } }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
+  margin-top: 60px;
+  padding: 15px; }
+  @media only screen and (max-width: 1100px) {
+    .grid {
+      grid-template-columns: 1fr; } }
+
+.h1 {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "PT Mono", monospace;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #2a2426; }
+  .h1:after {
+    content: ' ';
+    margin-left: 15px;
+    width: 75%;
+    height: 2px;
+    background-color: #2a2426; }
+
+.info-item {
+  width: 100%; }
+  .info-item .info {
+    padding-top: 60px; }
+    @media only screen and (max-width: 1100px) {
+      .info-item .info {
+        align-content: center;
+        justify-content: center; } }
+    .info-item .info p {
+      border-right: 2px solid #000;
+      max-width: 320px;
+      line-height: 1.6em;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      @media only screen and (max-width: 1100px) {
+        .info-item .info p {
+          max-width: 100%; } }
+      .info-item .info p:first-child {
+        border-bottom: 2px solid #000; }
+    .info-item .info .aberto {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: #1ab912;
+      border-radius: 50%;
+      margin-right: 30px; }
+  .info-item p.telefone {
+    color: #988c77; }
+    .info-item p.telefone:after {
+      content: "////";
+      display: block;
+      padding-top: 120px;
+      font-family: auto;
+      font-size: 15.625rem;
+      font-weight: bold;
+      color: #2a2426; }
+      @media only screen and (max-width: 1100px) {
+        .info-item p.telefone:after {
+          text-align: center; } }
+  .info-item img.description {
+    border: 10px solid #cbc6b9;
+    width: 100%;
+    box-sizing: border-box; }
+
+.menu-item {
+  position: relative; }
+  .menu-item .cardapio:last-child {
+    margin-top: 120px; }
+  .menu-item .cardapio h2 {
+    line-height: 1.4rem;
+    margin-left: 60px;
+    margin-bottom: 45px;
+    font-family: "Aref Ruqaa", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #2a2426; }
+    @media only screen and (max-width: 1100px) {
+      .menu-item .cardapio h2 {
+        text-align: center;
+        margin-left: 0; } }
+  .menu-item .cardapio img {
+    position: absolute;
+    right: 120px;
+    border-radius: 50%;
+    border: 10px solid #cbc6b9; }
+    @media only screen and (max-width: 1100px) {
+      .menu-item .cardapio img {
+        position: inherit;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        display: block; } }
+  .menu-item .cardapio ul {
+    list-style: none; }
+    .menu-item .cardapio ul li {
+      line-height: 1.6rem;
+      font-family: "PT Mono", monospace;
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: #2a2426; }
+      .menu-item .cardapio ul li span {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 18/16rem/16rem;
+        font-weight: 400;
+        color: #2a2426;
+        color: #988c77;
+        margin-right: 10px;
+        text-align: right; }
+
+form {
+  display: flex;
+  flex-direction: column; }
+  form input,
+  form textarea {
+    margin-bottom: 10px; }
+  form input[type="text"],
+  form input[type="tel"],
+  form textarea {
+    line-height: 1.66rem;
+    color: #2a2426;
+    padding: 0 5px;
+    height: 40px;
+    border: 2px solid #988c77;
+    background: transparent; }
+    form input[type="text"]:focus, form input[type="text"]:hover,
+    form input[type="tel"]:focus,
+    form input[type="tel"]:hover,
+    form textarea:focus,
+    form textarea:hover {
+      outline: none;
+      border-color: #cbc6b9; }
+  form input.btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 2px solid #988c77;
+    background-color: transparent;
+    display: block;
+    width: 200px;
+    padding-top: 5px;
+    font-family: "PT Mono",monospace;
+    font-size: 1.125em;
+    line-height: 1.66667em;
+    color: #988c77;
+    transition: .3s;
+    box-shadow: 5px 5px 0 -2px #cbc6b9, 5px 5px 0 0 #988c77; }
+    form input.btn:hover {
+      box-shadow: 3px 3px 0 -2px #cbc6b9, 3px 3px 0 0 #988c77; }
+
+.link-map {
+  margin-top: 60px;
+  display: block; }
+  .link-map .map {
+    margin-top: 60px;
+    box-shadow: 0 0 0 10px #cbc6b9;
+    margin: 0 auto;
+    width: 100%;
+    height: auto; }
+
+footer {
+  background-color: #2A2426;
+  box-shadow: 0 0 0 10px #2a2426; }
+  footer div {
+    height: 60px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto; }
+    @media only screen and (max-width: 1100px) {
+      footer div {
+        flex-direction: column;
+        height: 120px;
+        justify-content: center; } }
+    footer div p {
+      color: #fff; }
+      @media only screen and (max-width: 1100px) {
+        footer div p {
+          margin-bottom: 30px; } }
+
+/*# sourceMappingURL=style.css.map */

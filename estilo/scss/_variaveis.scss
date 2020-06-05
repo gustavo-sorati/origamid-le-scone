@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
+
+$background: #edece4;
+$border: #cbc6b9;
+$font-main: 'PT Mono', monospace;
+$font-secondary: 'Aref Ruqaa', serif;
+$font-color: #2a2426;
+
+@mixin responsivo($dispositivo){
+	@if ($dispositivo == tabletW) {
+		@media only screen and (min-width: 768px) and (max-width: 1300px) {
+			@content;
+		}
+	} 
+	@else if ($dispositivo == tablet) {
+		@media only screen and (max-width: 1100px) {
+			@content;
+		}
+    }
+    @else if ($dispositivo == mobile) {
+		@media only screen and (max-width: 1100px) {
+			@content;
+		}
+	}
+}
+
+@mixin font-1($tipo: $font-main, $size: 18, $weight: 400) {
+    font-family: $tipo;
+    font-size: $size / 16 + rem;
+    font-weight: $weight;
+    color: $font-color;
+}
+
+@mixin font-2($tipo: $font-secondary, $size: 18 / 16 + rem, $weight: 400) {
+    font-family: $tipo;
+    font-size: $size / 16 + rem;
+    font-weight: $weight;
+    color: $font-color;
+}
